@@ -58,6 +58,8 @@ body {
 
 p {
 	margin: 0 0 20px 0;
+    font-size: 15px;
+    font-style: normal;
 }
 
 h2 {
@@ -68,10 +70,22 @@ h2 {
 	}
 
 h3 {
-	color: #c60;
-	font-size: 22px;
-	font-weight: bold;
-	margin-bottom: 10px;
+     color: #c60;
+     font-size: 22px;
+     font-weight: bold;
+     margin-bottom: 10px;
+ }
+
+h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 a {
@@ -100,7 +114,7 @@ body {
 #header {
 	width: 800px;
 	height: 90px;
-	padding-top: 20px;
+	padding-top: 90px;
 }
 
 #content {
@@ -262,7 +276,7 @@ ul#navigation {
 --------------------*/
 
 #home div.left {
-	background: url('images/feature-bg-twitter.png') no-repeat top center;
+	background: url('images/feature-bg-twitter.jpg') no-repeat top center;
 }
 	#home .left p.tweet-text {
 		width: 222px;
@@ -377,5 +391,18 @@ input, textarea {
     background: url("images/featured-bg.jpg");
     margin-left: -250px;
     margin-top: 45px;
+}
+
+.externalLinks
+{
+    margin-left: 78px;
+    margin-top: -45px;
+}
+
+.aboutGroupMembers
+{
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
