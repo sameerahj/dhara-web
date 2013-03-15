@@ -144,9 +144,9 @@ body {
         margin: 10px;
 	}
 	#content div.right {
-		width: 470px;
+		width: 490px;
 		float: left;
-		margin-left: 20px;
+		margin-left: 15px;
         margin-top: 20px;
 	}
 
@@ -356,7 +356,7 @@ input, textarea {
 	background: url("images/icon-home.png") no-repeat top left;
 	}
 	#contactinfo p {
-	font-size: 21px;
+	font-size: 18px;
 	text-indent: 100px;
 	margin-bottom: 0;
 	}
