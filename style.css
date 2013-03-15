@@ -74,15 +74,20 @@ h3 {
  }
 
 h4 {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 h5 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+ul {
+    font-size: 15px;
+    margin-left: 50px;
 }
 
 a {
@@ -310,7 +315,7 @@ ul#navigation {
 --------------------*/
 
 #contact div.left h3, #contact div.left ul {
-	margin: 10px 0 0 17px;
+	margin: 10px 0 0 22px;
 }
 
 #contact ul li.right {
