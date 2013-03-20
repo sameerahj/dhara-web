@@ -54,6 +54,10 @@
                 return false;
             });
         });
+        function loadContent(resource)
+        {
+            $('#pageContents').load(resource);
+        }
     </script>
 
 </head>
@@ -63,15 +67,25 @@
 <!-- Site header and navigation -->
 <div id="header">
     <div id="title"><img src="images/title.png" alt=""></div>
-    <ul id="navigation">
+    <ul id="navigation" style="list-style: none">
         <li><a class="home" href="#home"><img src="images/icon-social.png" alt="Home"></a></li>
-        <li><a class="project" href="#project">project</a></li>
+        <li><a class="project" href="#project"><img src="images/icon-work.png" alt="Project"></a></li>
         <li><a class="about" href="#about"><img src="images/icon-about.png" alt="About"></a></li>
         <li><a class="contact" href="#contact"><img src="images/icon-contact.png" alt="Contact"></a></li>
     </ul>
 </div>
 <div id="featuredArticles">
-    <div id="featuredContent">
+    <div class="content">
+        <h3>Contents</h3>
+
+        <h4><a href="http://airavata.apache.org/">Apache Airavata</a></h4>
+        <p>Apache Airavata is a distributed computing service-oriented framework ...</p>
+        <h4><a href="#">OGC</a></h4>
+        <p>The Open Geospatial Consortium (OGC) is an international industry consortium ...</p>
+    </div>
+</div>
+<div id="siteContent">
+    <div class="content">
         <h3>Featured</h3>
 
         <h4><a href="http://airavata.apache.org/">Apache Airavata</a></h4>
@@ -252,6 +266,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div id="pageContents" class="page">
+
+    </div>
     </div>
 </div>
 </div>

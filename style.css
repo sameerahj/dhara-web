@@ -430,3 +430,35 @@ input, textarea {
 {
     list-style: none;
 }
+
+#siteContent
+{
+    width: 230px;
+    height: 300px;
+    background: url("images/featured-bg.jpg");
+    margin-right: -250px;
+    margin-top: -300px;
+    float: right;
+}
+
+.content
+{
+    padding: 15px;
+}
+
+#members
+{
+    padding: 15px;
+}
+
+#bodyContent {
+    background: url("images/content-bg.jpg")  top center repeat-y;
+    width: 822px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+#contentDescription
+{
+    padding: 10px;
+}

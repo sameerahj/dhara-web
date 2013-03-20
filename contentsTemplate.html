@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Dhara Project</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="ie.css" media="screen">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="lightbox.css" media="screen">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.lightbox-0.5.pack.js"></script>
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/caviar-dreams.cufonfonts.js"></script>
+    <script type="text/javascript" src="js/calibri.cufonfonts.js"></script>
+
+    <!-- Cufon text replacement -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            Cufon.replace('#about .right ul li');
+            Cufon.replace('h2', { textShadow: '0 2px rgba(0, 0, 0, 0.15)' });
+            Cufon.replace('#home .right a', {hover:true});
+            Cufon.replace('#project .left h3', {hover:true});
+            Cufon.replace('h3', { textShadow: '0 2px rgba(0, 0, 0, 0.15)' });
+            Cufon.replace('h4', { textShadow: '0 2px rgba(0, 0, 0, 0.15)' });
+            Cufon.replace('h5', { textShadow: '0 2px rgba(0, 0, 0, 0.15)' });
+            Cufon.replace('#contactinfo'), {hover:true};
+            Cufon.replace('p', {fontFamily:'Calibri'});
+            Cufon.replace('ul',{fontFamily:'Calibri'});
+        });
+    </script>
+
+    <!-- jQuery lightbox -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#project .right a').lightBox();
+        });
+    </script>
+
+    <!-- Navigation and Content effects -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.page').hide();
+            $('#navigation li:first').addClass('active').show();
+            $('.page:first').show();
+
+            $('#navigation li').click(function(){
+                $('#navigation li').removeClass('active');
+                $(this).addClass('active');
+
+                $('.page').hide();
+                var activeTab = $(this).find('a').attr('href');
+                $(activeTab).fadeIn('slow');
+                return false;
+            });
+        });
+    </script>
+
+</head>
+<body style="padding-top: 30px">
+<div id="bodyContent">
+    <div id="contentDescription">
+        <h3>Welcome to Dhara , a geo science gateway. </h3>
+        <br>
+        <p >Dhara provides access to geo science services by extracting geo data
+            from various geo data sources and analyzing them. It also provides an environment where it is possible for the scientists to create,
+            execute, manage and test geo science workflows.</p>
+        <br>
+        <p>Scientists can use geo science services catered through Dhara to access and analyze geo spatial data. Dhara creates an
+            environment to run geo science experiments such as spatial prediction of landslide hazards, with its workflow management
+            capabilities.</p>
+    </div>
+</div>
+</body>
