@@ -280,6 +280,8 @@ ul#navigation {
 
 #home div.left {
 	background: url('images/feature-bg-twitter.jpg') no-repeat top center;
+    width: 350px;
+    height: 350px;
 }
 	#home .left p.tweet-text {
 		width: 222px;
@@ -293,7 +295,9 @@ ul#navigation {
 		position: absolute;
 		bottom: 0px;
 	}
-
+#home div.right {
+    width: 400px;
+}
 #home .right ul li {
 	float: left;
 	margin: 0 20px;
@@ -461,4 +465,49 @@ input, textarea {
 #contentDescription
 {
     padding: 10px;
+}
+
+#contentLinks
+{
+    margin-left: 20px;
+}
+
+#contentPages
+{
+    margin: 10px;
+}
+
+#contentPages
+{
+ margin: 10px;
+ font-family: Roman;
+}
+
+#contentPages h2 {
+    font-size: 32px;
+    padding-top: 4px;
+    margin-bottom: 30px;
+}
+
+#contentPages h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contentPages h4 {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contentPages h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contentPages p {
+    margin: 20px;
+    text-align: justify;
 }

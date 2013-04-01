@@ -56,7 +56,11 @@
         });
         function loadContent(resource)
         {
-            $('#pageContents').load(resource);
+            $('#contentPages').load(resource);
+            $('#navigation li').removeClass('active');
+            $('.page').hide();
+            $('#pageContents').fadeIn('slow');
+            return false;
         }
     </script>
 
@@ -77,11 +81,13 @@
 <div id="featuredArticles">
     <div class="content">
         <h3>Contents</h3>
-
-        <h4><a href="http://airavata.apache.org/">Apache Airavata</a></h4>
-        <p>Apache Airavata is a distributed computing service-oriented framework ...</p>
-        <h4><a href="#">OGC</a></h4>
-        <p>The Open Geospatial Consortium (OGC) is an international industry consortium ...</p>
+        <ul id="contentLinks">
+            <li><h4><a href="#" onclick="loadContent('geoscience.html');">Geo science</a></h4></li>
+            <li><h4><a href="#" onclick="loadContent('document.html');">Scientific Workflows</a></h4></li>
+            <li><h4><a href="#">Science Gateways</a></h4></li>
+            <li><h4><a href="#">Architecture</a></h4></li>
+            <li><h4><a href="#">Literature Survey</a></h4></li>
+        </ul>
     </div>
 </div>
 <div id="siteContent">
@@ -168,9 +174,9 @@
                             <div id="image1"><img src="images/harsha.jpeg" style="width: 75px ;height: 75px" alt="Harsha Kumara">
                                 <div class="externalLinks">
 
-                                        <a href="http://lk.linkedin.com/pub/harsha-kumara/28/a96/32b"><img src="images/icon-linkedin.png" width="32" height="32" alt="Linkedin"></a>
-                                        <a href="http://harshcreationz.blogspot.com/"><img src="images/icon-blogger.png" width="32" height="32" alt="Blog"></a>
-                                        <a href="https://twitter.com/harsz89"><img src="images/icon-twitter.png" width="32" height="32" alt="Twitter"></a>
+                                    <a href="http://lk.linkedin.com/pub/harsha-kumara/28/a96/32b"><img src="images/icon-linkedin.png" width="32" height="32" alt="Linkedin"></a>
+                                    <a href="http://harshcreationz.blogspot.com/"><img src="images/icon-blogger.png" width="32" height="32" alt="Blog"></a>
+                                    <a href="https://twitter.com/harsz89"><img src="images/icon-twitter.png" width="32" height="32" alt="Twitter"></a>
 
                                 </div>
                             </div>
@@ -227,9 +233,9 @@
                                 <h5>Dr.Shahani Markus Weerawarana</h5>
                                 <div id2="imageMember"><img src="images/supervisor.jpg" style="width: 75px ;height: 75px" alt="Dr.Shahani Markus Weerawarana">
                                     <div class="externalLinks">
-                                            <a href="http://www.linkedin.com/in/shahanimw"><img src="images/icon-linkedin.png" width="32" height="32" alt="Linkedin"></a>
-                                            <br/>
-                                            <br/>
+                                        <a href="http://www.linkedin.com/in/shahanimw"><img src="images/icon-linkedin.png" width="32" height="32" alt="Linkedin"></a>
+                                        <br/>
+                                        <br/>
                                     </div>
                                 </div>
                                 <p class="aboutGroupMembers"></p>
@@ -267,10 +273,13 @@
             </div>
         </div>
     </div>
-    <div id="pageContents" class="page">
 
+    <div id="pageContents" class="page">
+        <div id="contentPages">
+
+        </div>
     </div>
-    </div>
+</div>
 </div>
 </div>
 </body>
