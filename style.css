@@ -395,7 +395,7 @@ input, textarea {
 {
     width: 230px;
     height: 300px;
-    margin-left: -250px;
+    margin-left: -220px;
     margin-top: 45px;
     z-index: 10001;
     position: relative;
@@ -538,7 +538,7 @@ input, textarea {
 }
 
 .sidebarmenu ul li a:link, .sidebarmenu ul li a:visited, .sidebarmenu ul li a:active{
-    background-color: #CC8F00; /*background of tabs (default state)*/
+    background-color: #cc7600; /*background of tabs (default state)*/
 }
 
 .sidebarmenu ul li a:visited{
