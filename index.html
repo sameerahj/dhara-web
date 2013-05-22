@@ -13,7 +13,7 @@
     <script type="text/javascript" src="js/cufon-yui.js"></script>
     <script type="text/javascript" src="js/caviar-dreams.cufonfonts.js"></script>
     <script type="text/javascript" src="js/calibri.cufonfonts.js"></script>
-
+    <script type="text/javascript" src="js/fyp_web.js"></script>
     <!-- Cufon text replacement -->
     <script type="text/javascript">
         $(document).ready(function(){
@@ -24,9 +24,11 @@
             Cufon.replace('h3', { textShadow: '0 2px rgba(0, 0, 0, 0.15)' });
             Cufon.replace('h4', { textShadow: '0 2px rgba(0, 0, 0, 0.15)' });
             Cufon.replace('h5', { textShadow: '0 2px rgba(0, 0, 0, 0.15)' });
+            Cufon.replace('.litreview');
             Cufon.replace('#contactinfo'), {hover:true};
             Cufon.replace('p', {fontFamily:'Calibri'});
             Cufon.replace('ul',{fontFamily:'Calibri'});
+
         });
     </script>
 
@@ -81,13 +83,22 @@
 <div id="featuredArticles">
     <div class="content">
         <h3>Contents</h3>
-        <ul id="contentLinks">
-            <li><h4><a href="#" onclick="loadContent('geoscience.html');">Geo science</a></h4></li>
-            <li><h4><a href="#" onclick="loadContent('document.html');">Scientific Workflows</a></h4></li>
-            <li><h4><a href="#">Science Gateways</a></h4></li>
-            <li><h4><a href="#">Architecture</a></h4></li>
-            <li><h4><a href="#">Literature Survey</a></h4></li>
-        </ul>
+        <div class="sidebarmenu">
+            <ul id="sidebarmenu1">
+                <li><a href="#" onclick="loadContent('geoscience.html');">Geo science</a></li>
+                <li><a href="#">OGC's WPS</a></li>
+                <li><span><a href="#" onclick="loadContent('document.html');">Scientific Workflows</a></span>
+                </li>
+                <li><a href="#">Science Gateways</a></li>
+                <li><a href="#">Architecture</a></li>
+                <li class="litreview"><a href="#">Literature Review</a>
+                    <ul>
+                        <li><a href="#">Litreview.pdf</a></li>
+                        <li><a href="#">Presentation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <div id="siteContent">
@@ -97,8 +108,6 @@
         <p>"Enabling Computational Geoscience" research paper submitted...</p>
         <h4><a href="http://airavata.apache.org/">Apache Airavata</a></h4>
         <p>Apache Airavata is a distributed computing service-oriented framework ...</p>
-        <h4><a href="http://www.opengeospatial.org/">OGC</a></h4>
-        <p>The Open Geospatial Consortium (OGC)</p>
     </div>
 </div>
 <!-- Site content -->
