@@ -1,10 +1,13 @@
+<!DOCTYPE html>
 <h4>What are workflows?</h4>
 
-<p>"Workflows describe the relationship of the individual computational components and their input and output data in a
-    declarative way."[1] Workflow has an explicit structure and representations. Nodes of a workflow can be said to represent a
-    process and edges the data flow between the processes. "A program (or script) is to a workflow what an unstructured document
-    is to a (structured) database."[1] Each step in a workflow specifies the computation to be executed. The steps of a workflow
-    are linked according to the data flow and their dependencies. [2]</p>
+<p>A workflow is an abstract model of a series of steps connected to represent a real world process where each
+    step defines a specific task or functionality. According to [2], “A program (or script) is to a workflow what
+    an unstructured document is to a (structured) database”. Workflows are capable of hiding the complexity of the
+    execution process. They provide a representation of complex analysis composed of diverse models [3]. A workflow
+    is typically authored using a visual front-end or can be hard-coded, and their execution is delegated to a
+    workflow execution engine that handles the invocation of the remote applications [4]. Workflow systems can be
+    categorized mainly into two sections; business workflows, scientific workflows.</p>
 
 <h3>Business workflows vs. scientific workflows</h3>
 
@@ -16,7 +19,6 @@
     <li>In physics, workflows are used to search for gravitational waves and model the structure of atoms.</li>
     <li>In ecology, scientists use workflows to explore the issues of biodiversity.</li>
 </ul>
-<br>
 <p>
     One of the major differences between business and scientific workflows are that, business workflows are control
     flow oriented while scientific processes are data flow oriented. This fact can be explained as follows: a dependency
@@ -41,7 +43,13 @@
 
 <h3>Scientific workflows</h3>
 
-<p>Three motivations for scientific workflow have been identified as follows: [4]</p>
+<p> We are focused on scientific workflows which are significantly different from the business workflows.
+    One of the major differences between business and scientific workflows are that, business workflows are
+    control flow oriented while scientific processes are data flow oriented.
+    The data flow does not impose an order of execution, it only specifies the input and output of components;
+    component B should use component A?s output as input. Three motivations for scientific workflow have been
+    identified as follows: [5]
+    </p>
 <ul>
     <li>Some complex e-science applications often require the creation of a collaborative workflow</li>
     <li>Many e-scientists lack the necessary low-level expertise to utilize the current generation of
@@ -49,29 +57,19 @@
     <li>Workflow specifications can be reused, modified and shared once they are defined.</li>
 </ul>
 
-<p>Following are some of the basic structures or components of scientific workflows.
-    The final workflow is usually composed of several such components. [5]
-    <br>
-    <b>Process structure:</b> Operates on some input data to provide an output
-    <br>
-    <b>Pipeline structure:</b> Several data processing jobs are combined sequentially
-    <br>
-    <b>Data distribution structure:</b> Can be categorized in two parts;
-    produce output data that are consumed by multiple jobs and
-    operate on large datasets and divide them into smaller subsets to be processed by other job in the workflow - also
-    called as Data portioning structure Data partitioning leads to increased parallelism in the later stages on the workflow
-    which is the purpose of it.
-    <br>
-    <b>Data aggregation structure:</b> Aggregate and process the output of several individual jobs and generate a combined output.
-    This leads to a reduction of parallelism on the workflow. It is also time consuming.
-    <br>
-    <b>Data redistribution structure:</b> Data aggregated from a previous stage are redistributed to multiple jobs in a following stage.
-    This represents a potential bottleneck but once again increases parallelism. This is used in many workflows and represents
-    a synchronization point from the data flow perspective.
-    <br>
+<p>With the availability of vast computational power, scientific communities are engaged in solving
+    interconnected problems spread over multiple disciplines. These activities have accelerated by
+    mapping them onto a workflow. For an example, in earthquake science, workflows are used to predict
+    the magnitude of earthquakes within a geographic area over a period of time. Scientific workflow is
+    the procedure of combining data and processes into a structured set of steps which can operate as a
+    solution to a scientific problem. It includes declarative description about each component and its input
+    and output. [2] Workflows can be generated manually by scientists or using third party tools to assist larger
+    workflows. They utilize distributed resources in order to access, manage and process large amounts of data
+    from a higher-level [6]. Processing and managing such large amounts of data require addressing proper techniques
+    for storage facilities and to handle scaling resources.
 </p>
 
-<h3>Workflow engines and scientific workflow management systems</h3>
+<h3>Scientific workflow management systems</h3>
 <p>
     Both scientific and business workflow management systems provide means to, [1]</p>
 <ol>
@@ -80,69 +78,148 @@
     <li>Automating the execution of processes by scheduling, controlling and monitoring the tasks</li>
 </ol>
 <p>
-    "Workflow systems have a number of advantages for constructing and managing computational tasks compared to programs and scripts.
-    They provide a simple programming model whereby a sequence of tasks is composed by connecting the outputs of one task to the
-    inputs of another. Furthermore, workflow systems often provide intuitive visual programming interfaces, which make them more
-    suitable for users who do not have substantial programming expertise". [3].  Even though the existing workflow management systems
-    provide various capabilities researches are still going on to solve issues regarding creation, reuse, provenance tracking,
-    performance optimization, and reliability. Not only that, advanced researches in science have forced for more capabilities like
-    "supporting dynamic event-driven analyses, handling streaming data, accommodating interaction with users, intelligent assistance
-    and collaborative support for workflow design, and enabling result sharing across collaborations" [2].</p>
+    Scientific workflow management systems act as a middleware for creating, combining, executing workflows and data
+    management tools. They have evolved with the aim of producing a high level platform enabling the end-user scientists
+    to create, manage, compose, execute and test scientific workflows without concentrating on the low-level computational
+    technology. In the paper [2] scientific workflow management systems are recognized as providing means to; model and
+    specify processes with design primitives, re-engineer developed processes such as verification and optimization,
+    automating the execution of processes by scheduling, controlling and monitoring the tasks.    </p>
+   <p>Before the invention of workflow management systems, programs and scripts were used as means to run scientific
+    process with predefined steps. But workflow management systems provide advantages over the earlier mechanism for
+    constructing and managing computational tasks. Main advantage is that they provide a simple programming model to
+    compose a sequence of tasks simply by connecting the outputs of one task to the inputs of another. An added advantage
+    is the intuitive visual programming interfaces of workflow management systems, which make them more suitable for
+    users without ample programming expertise. [7]     </p>
+   <p> Currently there are many workflow management systems developed targeting various scientific communities such as
+    Triana, Pegusas, Taverna and Kepler [8]. Most of these systems are designed to solve problems in certain domains.</p>
 
 <h3>Desirable application level features of scientific workflow management systems</h3>
 
-<h5>Collaboration</h5>
-<p>Scientific researches and experiments often involve a group of people spread among different physical locations.
-    They need to collaborate in order to provide efficient and accurate results from the scientific processes. "Within
-    these collaborations, various individuals are responsible for different aspects of data acquisition, processing,
-    and analysis, and entire projects often generate publications." [2] Such environments require tools that can manage
-    the steps of scientific discovery and bridge the differing expertise of individuals. "Today, complex scientific analyses
-    increasingly require tremendous amounts of human effort and manual coordination." [2]</p>
-<h5>Reproducibility</h5>
-<p>"Reproducibility is at the core of the scientific method, enabling scientists to evaluate the validity of each otherâ€™s
-    hypotheses and pro- viding the basis for establishing known truths. Reproducibility requires rich provenance information
-    so researchers can repeat techniques and analysis methods to obtain scientifically similar results." [2] With the various
-    tools and methods for storing and sharing information (e-mails, wiki entries etc.), it is easy to lose track of provenance
-    data. Therefore it is important for workflow management systems to have a strong mechanism to capture and generate provenance
-    information. Not only that, WFMS should pass along the provenance information of input data to the output.  "Workflow systems
-    must complement existing data repositories with provenance and metadata repositories that enable the discovery of the workflows
-    and application components used to create the data. Two important concerns for scientists in these highly collaborative endeavors
-    are credit assignment and recognition of individual contributions." [2]</p>
-<h5>Flexible environments</h5>
+<h5>Handling dynamic workflows</h5>
+<p>According the nature of experiments, the vision of supporting dynamic, adaptive workflows is accelerated.
+    Capturing mechanisms to create certain results via reproducibility is one aspect of handling dynamic workflows [33].
+    The demand on dynamic workflows increases due to the nature of scientific methodologies, such as; the runtime
+    decisions on later steps of a workflow may need the initial steps? results. Dynamic workflows may respond for
+    external events [33] and may depend on the results of data analysis computation. In addition, dynamic workflows
+    could have taken place due to observation and modification of different scientists and researchers in same
+    experimental procedure. In contrast the workflow execution may determine its path dynamically at runtime.</p>
+     <p>Thus managing a dynamic workflow is a challenge in the application. The managing process of a workflow is
+         evolving through cycles. Workflow can be share, refine and rerun to check the result. The process will
+         continue until scientists get a satisfied result. Hence a proper user interaction should handle via an
+         appropriate user interface and the results of execution should be query and display in an understandable
+         manner. Real time workflow status monitoring and dynamic notification is also plays a key role in the dynamic
+         workflow handling.</p>
+
+<h5>Interoperability</h5>
+<p>Emerging of several workflow management systems with specific features has stimulated the scientific researches in
+    recent past. The collaborative nature in scientific researches results multiple contributors from geographically
+    distributed locations taking part in developing a single workflow experiment. Almost all of the widely used workflow
+    systems have been developed with different communities, targeting different domains and exhibiting specific features
+    within relevant area. They use different workflow engines, description languages, and formalism which makes it
+    less interoperable [34]. Due to that differentiation it is hard to express workflow of one system using a description
+    language of another [34].</p>
+    <p>Thus a key architectural requirement in SWfMS is to facilitate the interoperability between different SWfMS,
+        so that one system can take benefits of tools and unique features of another system [35]. This enables the
+        reusing and sharing of workflows among systems. Accordingly in order to achieve interconnection within different
+        systems, workflows should be interoperable.</p>
+
+     <p>The interoperability can be achieved in 3 levels [35];</p>
+        <ol>
+            <li>Task-level</li>
+            <li>Workflow-level</li>
+            <li>Subsystem-level</li>
+        </ol>
+     <p>GEMLCA service [34] has achieved interoperability of heterogeneous workflow systems via workflow engines
+         integration which can be listed under the 3rd level achievement. The proposed solution executes workflow in
+         the native platform and exposes it to run in non-native platform. The basic idea in the integration of workflows
+         is the ability to use a workflow as a one node/task in the system.</p>
+
+<h5>Data management</h5>
 <p>"Individual scientists should be able to steer the system to conduct unique analyses and create novel workflows
     with previously unseen combinations and configurations of models". [2]. These flexible environments must ensure security,
     reliability and scalability as well.</p>
 
-<h3>What is provenance?</h3>
-<p>
-    "The provenance (also referred to as the audit trail, lineage, and pedigree) of a data product contains information about
-    the process and data used to derive the data product." [3] This data consists of answers to the following questions: [3]</p>
-<ul>
-    <li>Who created this data product and when</li>
-    <li>When was it modified and by whom?</li>
-    <li>What was the process used to create the data product?</li>
-    <li>Were two data products derived from the same raw data?</li>
-</ul>
+<h5>Data management</h5>
+<p>Data management is a one of major requirement in the workflow lifecycle. Data management includes data inputs
+    in creation and execution workflows with handling results. These steps access terabytes of data at initials
+    steps, intermediate levels and in end results as well. Data produced and used in the workflow execution process
+    deals with several data types, such as provenance data for collaboration purposes, metadata to query or store
+    workflow information, input data from remote data sources, data from intermediate levels to be analyzed and
+    feed the later tasks [34].</p>
+ <p>There are several procedures that need to be following in data handling. Metadata or provenance data need to agree
+     to a community based standard which is rich enough to describe the data sets and information on data [34]. In
+     addition maintaining metadata catalogues to query and store metadata is another requirement. Use of common metadata
+     catalog independently from the systems will provide good coordination of data access and security.</p>
+ <p>In contrast identifying the input data formats in various remote processes for the execution of workflows is
+     a major concern. Schedulers in the system responsible for selecting data sets and appropriate computational
+     resources to run tasks [34].Required data need to feed consistently and fast to places where computation takes
+     place. Thus a proper data management section is a major requirement in a workflow management system, specially
+     using for data-intensive applications.</p>
 
-<p>Provenance management is a very time consuming and error-prone. But they are highly important to preserve data, determine
-    data quality and authorship. Provenance has significant importance in scientific processes where reproducibility is important
-    to validate the result data products and prove the results of scientific experiments. [3]
-    There are different kinds of provenance. There is information on the dependency relationships among data products and the processes
-    that generate them. Then there is also user defined information like decisions and notes that cannot be captured automatically.
-    Workflow systems can be easily instrumented to automatically capture provenance. Not only capturing provenance but it is also
-    important to model, store and query provenance. [3]</p>
+ <h5>Quality of Service</h5>
+ <p>Requirements of Quality of Service (QoS) in workflow management systems need to be specified and optimized.
+     There are several concerns that took into account in recent past such as; reducing execution time, maximizing
+     bandwidth etc. [33]. In addition to time constraints there are some other QoS parameters; responsiveness, fault
+     tolerance, security, and costs [33]. Performance, reliability, security and fault tolerance are also related to
+     QoS. The WfMS need to meet the QoS requirements via exposing them to demanding techniques. Accessing cloud
+     services opposed to traditional reservation of resources is one aspect of optimizing resource allocation with
+     dynamic scaling up and down requirements.</p>
+<h5>Ease of use</h5>
+<p>Scientific workflow execution requires high computational power, which is gained through cyber infrastructure
+    such as Grid computing and Cloud computing. Open Science Grid and TeraGrid are science gateways which provide
+    widely used and well tested computational capabilities and services [33]. Nevertheless effective and optimized
+    usage of these computing resources requires expertise of tools such as Grid Toolkits. For the average scientist
+    or researcher who does not have ample expertise in such tools, effective utilization of the underlying computational
+    infrastructure becomes a tedious task.</p>
+<p>Computational complexities in scientific domain require undivided focus of the scientist. Therefore it is a key
+    requirement of scientific workflow management systems to provide its users with optimum level ease of use for
+    handling underlying resources. Separating the science-focused and technology-independent problem solving environment
+    from the underlying advanced computing infrastructure is considered as the potential approach for this issue in
+    the paper [35].</p>
 
-<h5>Applications of provenance</h5>
+<h5>Provenance tracking</h5>
+<p>Provenance tacking has become the main focus in many research projects as it is a critical component in workflow
+    sharing, reusing and end result reproducibility. Provenance provides answers to: “Who created this data product
+    and when? When was it modified and by whom? What was the process used to create the data product? Were two data
+    products derived from the same raw data?” [7]. Scientists and researchers often require putting in substantial
+    effort for managing the large amount of provenance information related to their work. Therefore scientific workflow
+    management systems should provide automated capabilities to capture metadata, log the sequence in applied steps,
+    parameter settings and intermediate data products [36].</p>
+<p>Sharing and reusing of workflows are common practices in scientific communities. Tracking and efficient capturing
+    of provenance information provides important information that is the key to preserving data, determining the data
+    quality and authorship [7]. Reproducibility is an essential feature of computational scientific experiments as same
+    as conventional laboratory experiments [36]. When provenance information is effectively embedded in workflows fellow
+    scientists can redo a particular experiment using the same data, following the same steps, evaluating the intermediate
+    data products and finally reproducing the experiment results. Holistically provenance information enables the
+    scientists to reproduce experiment results and evaluate the validity of each other?s hypotheses [33].</p>
 
-<p>Provenance and scientific publications: A key benefit for maintaining provenance of computational results is reproducibility: a detailed record of the steps followed to produce a result allows others to reproduce and validate these results.
-    Provenance and data exploration: Provenance can also be used to simplify exploratory processes. In particular, we present mechanisms that allow the flexible reuse of workflows; scalable exploration of large parameter spaces; and comparison of data products as well as their corresponding workflow.
-    Social analysis of scientific data: Social Web sites and Web-based communities enable users to leverage the wisdom of the crowds. In the recent past, a new class of Web site has emerged that enables users to upload and collectively analyze many types of data.
-    Provenance in education: Teaching is one of the killer applications of provenance-enabled workflow systems, in particular, for courses which have a strong data exploration component such as data mining and visualization. Provenance can help instructors to be more effective and improve the students' learning experience.</p>
+<h5>Sharing and reuse</h5>
+<p>Sharing and reuse in various aspects is widely used practice within the scientific communities. A Workflow is a
+    great way to electronically capture a process, which paves the way to sharing and reusing them [33] .
+    Encouraging researchers to include workflow usage into their practices would contribute to rapid advancements.
+    Nevertheless there are several workflow management systems in use at present. Therefore it is essential that reuse
+    is supported among them. Support for reuse has to be done in two different aspects: workflow semantics and
+    infrastructure [33].</p>
+<p>Researchers have to agree on process semantics used in workflows. Workflow management systems (WfMS) should provide
+    capabilities and emphasis on constructing workflows in formal and explicit ways. Sharing is the major intention
+    behind workflow reuse. Nonetheless reusing is often followed by refinements. Abstractions allow scientists to
+    identify the level of description useful to share workflows so that other scientists could refine and use [33].
+    Hence abstraction and refinement capabilities require being present in workflow management systems.</p>
+<p>There is a range of distinct computational environments such as Open Science Grid, TeraGrid and Amazon EC2, which
+    are used to run workflows. As a result workflow sharing and reuse often lead to instances where the same workflow
+    requires to be run on different and heterogeneous environments. Workflow management systems should allow user
+    created workflows to be easily run in these different environments without alteration.</p>
 
-<h5>Challenges</h5>
-<p>Information management infrastructure: With the growing volume of raw data, workflows and provenance information, there is a need for efficient and effective techniques to man- age these data.
-    Provenance analytics and visualization: The problem of mining and extracting knowledge from provenance data has been largely unexplored.
-    Interoperability: Complex data products may result from long processing chains that require multiples tools (e.g., scientific workflows and visualization tools). In order to provide detailed provenance for such data products, it becomes necessary to integrate provenance derived from different systems and represented using different models.</p>
+<h5>Monitoring and Error handling</h5>
+<p>Long running and data intensive scientific workflows are common scenarios. These workflows are often collaboratively
+    developed and even modified. Then these workflows are constructed with various distributed tasks over network
+    communications [35] . All in all above characteristics of scientific workflows impose additional challenges regarding
+    errors and failures. Therefore scientific workflow management systems require the capability to monitor status and
+    failure of a running workflows in various levels including mechanisms for catching and handling errors automatically [35].</p>
+<p>Pegasus workflow management system provides error handling which has been identified as a key feature of it.
+    It tries error handling in various levels: retrying tasks, retrying entire workflow, providing workflow-level
+    check-pointing, re-mapping portions of the workflow, trying alternative data sources and providing a rescue workflow
+    containing a description of only the work remaining as a last resort [30].</p>
 
 <h4>References</h4>
 <ul class="ulChange"    >
