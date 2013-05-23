@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<h3>What are workflows?</h3>
+
+<p>A workflow is an abstract model of a series of steps connected to represent a real world process where each
+    step defines a specific task or functionality. According to [1], "A program (or script) is to a workflow what
+    an unstructured document is to a (structured) database". Workflows are capable of hiding the complexity of the
+    execution process. They provide a representation of complex analysis composed of diverse models [2]. A workflow
+    is typically authored using a visual front-end or can be hard-coded, and their execution is delegated to a
+    workflow execution engine that handles the invocation of the remote applications [3]. Workflow systems can be
+    categorized mainly into two sections; business workflows, scientific workflows.</p>
+
+<h3>Business workflows vs. scientific workflows</h3>
+
+<p>Example use cases of scientific workflow: [4]</p>
+<ul>
+    <li>In astronomy, scientists are using workflows to generate science-grade mosaics of the sky, to examine the structure
+        of galaxies, and, in general, to understand the structure of the universe.</li>
+    <li>In bioinformatics, researchers are using workflows to understand the underpinnings of complex diseases.</li>
+    <li>In physics, workflows are used to search for gravitational waves and model the structure of atoms.</li>
+    <li>In ecology, scientists use workflows to explore the issues of biodiversity.</li>
+</ul>
+<p>
+    One of the major differences between business and scientific workflows are that, business workflows are control
+    flow oriented while scientific processes are data flow oriented. This fact can be explained as follows: a dependency
+    in scientific flow "characterizes the data relationship between an input and output of two respective tasks of a scientific
+    workflow whereas a dependency characterizes the partial order relation between the executions of two tasks in a business
+    workflow."[4]The data flow does not impose an order of execution, it only specifies the input and output of components;
+    component B should use component A’s output as input. In scientific workflows a number of tasks can be concurrent but
+    not in business workflows. Tasks represented in parallel will mean a conditional choice of one of them.
+</p>
+
+<p>Business workflows follow a clear set of rules but scientific workflows involve several different complex computing
+    processes and complex data. "To design a robust, fault-tolerance, and adaptive workflow, scientific workflow requires
+    modeling of complex control-flow in an essential data-flow oriented environment".[4] Another difference is that scientists
+    are concerned about the intermediate steps, results and data of a scientific process while business people are only
+    interested in optimizing possible parts of their process to reduce maintenance cost. Therefore "provenance management"
+    is identified to be of significant importance in scientific workflow management systems. [4] Scientific workflows
+    usually have simple computational models but business workflows have expressive languages (BPEL) to specify complex
+    control flow. Scientific workflows are usually based on data intensive tasks. [5] A point related to the above is;
+    "Scientific research requires flexible design and exploration capabilities that appear to depart significantly from
+    the more prescriptive use of workflows in business" [5]. "Another distinctive issue of scientific workflows is the
+    variety and heterogeneity of data within a single workflow."[5]</p>
+
+<h3>Scientific workflows</h3>
+
+<p> We are focused on scientific workflows which are significantly different from the business workflows.
+    One of the major differences between business and scientific workflows are that, business workflows are
+    control flow oriented while scientific processes are data flow oriented.
+    The data flow does not impose an order of execution, it only specifies the input and output of components;
+    component B should use component A?s output as input. Three motivations for scientific workflow have been
+    identified as follows: [6]
+    </p>
+<ul>
+    <li>Some complex e-science applications often require the creation of a collaborative workflow</li>
+    <li>Many e-scientists lack the necessary low-level expertise to utilize the current generation of
+        underlying computing infrastructure such as Grid toolkits</li>
+    <li>Workflow specifications can be reused, modified and shared once they are defined.</li>
+</ul>
+
+<p>With the availability of vast computational power, scientific communities are engaged in solving
+    interconnected problems spread over multiple disciplines. These activities have accelerated by
+    mapping them onto a workflow. For an example, in earthquake science, workflows are used to predict
+    the magnitude of earthquakes within a geographic area over a period of time. Scientific workflow is
+    the procedure of combining data and processes into a structured set of steps which can operate as a
+    solution to a scientific problem. It includes declarative description about each component and its input
+    and output. [1] Workflows can be generated manually by scientists or using third party tools to assist larger
+    workflows. They utilize distributed resources in order to access, manage and process large amounts of data
+    from a higher-level [7]. Processing and managing such large amounts of data require addressing proper techniques
+    for storage facilities and to handle scaling resources.
+</p>
+
+<h3>Scientific workflow management systems</h3>
+<p>
+    Both scientific and business workflow management systems provide means to, [4]</p>
+<ul>
+    <li>Model and specify processes with design primitives</li>
+    <li>Re-engineer developed processes such as verification and optimization</li>
+    <li>Automating the execution of processes by scheduling, controlling and monitoring the tasks</li>
+</ul>
+<p>
+    Scientific workflow management systems act as a middleware for creating, combining, executing workflows and data
+    management tools. They have evolved with the aim of producing a high level platform enabling the end-user scientists
+    to create, manage, compose, execute and test scientific workflows without concentrating on the low-level computational
+    technology. In the paper [3] scientific workflow management systems are recognized as providing means to; model and
+    specify processes with design primitives, re-engineer developed processes such as verification and optimization,
+    automating the execution of processes by scheduling, controlling and monitoring the tasks.    </p>
+   <p>Before the invention of workflow management systems, programs and scripts were used as means to run scientific
+    process with predefined steps. But workflow management systems provide advantages over the earlier mechanism for
+    constructing and managing computational tasks. Main advantage is that they provide a simple programming model to
+    compose a sequence of tasks simply by connecting the outputs of one task to the inputs of another. An added advantage
+    is the intuitive visual programming interfaces of workflow management systems, which make them more suitable for
+    users without ample programming expertise. [8]     </p>
+   <p> Currently there are many workflow management systems developed targeting various scientific communities such as
+    Triana, Pegusas, Taverna and Kepler [9]. Most of these systems are designed to solve problems in certain domains.</p>
+
+<h3>Desirable application level features of scientific workflow management systems</h3>
+
+<ul>
+    <li>Handling dynamic workflows</li>
+    <li>Interoperability</li>
+    <li>Data management</li>
+    <li>Quality of Service</li>
+    <li>Ease of use</li>
+    <li>Provenance tracking</li>
+    <li>Sharing and reuse</li>
+    <li>Monitoring and Error handling</li>
+</ul>
+<p>For further details on the application level concerns and workflows refer to the Literature review document</p>
+
+<h4>References</h4>
+<ul class="ulChange"    >
+    <li>[1] Ustun Yildiz, Adnene Guabtni, and Anne H. H. Ngu, "Business versus Scientific Workflow A Comparative study,"
+        in in Proceedings of the 2009 Congress on Services - I (SERVICES '09), 2009, pp. 340-343. </li>
+    <li>[2] E. Deelman and Y. Gil, "Managing large-scale scientific workflows in distributed environments: Experiences
+        and challenges," in e-Science and Grid Computing, 2006. e-Science'06. Second IEEE International Conference on,
+        2006, pp. 144-144.</li>
+    <li>[3]V. Curcin and M. Ghanem, "Scientific workflow systems-can one size fit all?," in Biomedical Engineering
+        Conference, 2008. CIBEC 2008. Cairo International, 2008, pp. 1-9. </li>
+    <li>[4] U. Yildiz, A. Guabtni, and A. H. H. Ngu, "Business versus Scientiﬁc Workﬂow A Comparative study.pdf."</li>
+    <li>[5] S. B. Davidson and J. Freire, "Provenance and Scientiﬁc Workﬂows.pdf."</li>
+    <li>[6] J. Chen and W. M. P. van der Aalst, "On scientific workflow," Ieee Tech. Comm. Scalable Comput. Newsl.,
+        vol. 9, no. 1, 2007. </li>
+    <li>[7] S. Pandey, D. Karunamoorthy, and R. Buyya, "Workflow engine for clouds," Cloud Comput. Princ. Paradig.
+        R Buyya J Broberg Goscinski Eds Isbn-13, pp. 978-0470887998, 2011. </li>
+    <li>[8] S. B. Davidson and J. Freire,"Provenance and scientific workflows: challenges and opportunities,"
+        in in Proceedings of the 2008 ACM SIGMOD international conference on Management of data, 2008, pp. 1345-1350.</li>
+    <li>[9] I. Altintas, J. Wang, D. Crawl, and W. Li, "Challenges and approaches for distributed workflow-driven
+        analysis of large-scale biological data: vision paper," in Proceedings of the 2012 Joint EDBT/ICDT Workshops,
+        2012, pp. 73-78. </li>
+</ul>
