@@ -139,7 +139,7 @@ body {
 	#content div.left {
 		width: 241px;
 		height: 322px;
-		background: url("images/feature-bg.png") no-repeat top left;
+		/*background: url("images/feature-bg.png") no-repeat top left;*/
 		float: left;
         margin: 10px;
 	}
@@ -239,11 +239,25 @@ ul#navigation {
 	CONTENT - PROJECT
 --------------------*/
 
+#introContentPara div.left {
+    background: url('images/feature-bg-twitter.jpg') no-repeat top center;
+    width: 350px;
+    height: 350px;
+}
+
 #project .left img {
 	background: none;
 	padding: 6px 10px 10px 6px;
 	margin-bottom: 0;
 }
+
+#poster{
+    margin: 25px 200px 25px;
+    width: 350px;
+    height: 495px;
+background: url("images/poster.jpg") no-repeat top center;
+    }
+
 
 #project .left h3 a {
 	color: #039;
@@ -313,6 +327,9 @@ ul#navigation {
 	#home .right ul li a img {
 		vertical-align: middle;
 	}
+
+
+
 
 /*--------------------
 	CONTENT - CONTACT
@@ -391,9 +408,9 @@ input, textarea {
     height: 15px;
 }
 
-#featuredArticles
+#siteContent
 {
-    width: 230px;
+    width: 210px;
     height: 300px;
     margin-left: -220px;
     margin-top: 45px;
@@ -417,13 +434,13 @@ input, textarea {
 
 #introductionContent
 {
-    margin: 15px;
+    margin: 10px;
 }
 
 #introContentPara
 {
     margin: 10px;
-    text-align: justify;
+    text-justify:inter-cluster;
 }
 
 .memberDetails
@@ -436,7 +453,7 @@ input, textarea {
     list-style: none;
 }
 
-#siteContent
+#featuredArticles
 {
     width: 230px;
     height: 300px;
@@ -513,52 +530,77 @@ input, textarea {
     text-align: justify;
 }
 
-.sidebarmenu ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font: bold 13px Verdana;
-    width: 180px; /* Main Menu Item widths */
-    border-bottom: 1px solid #ccc;
-}
-
-.sidebarmenu ul li{
-    position: relative;
-}
-
-/* Top level menu links style */
-.sidebarmenu ul li a{
-    display: block;
-    overflow: auto; /*force hasLayout in IE7 */
-    color: white;
-    text-decoration: none;
-    padding: 6px;
-    border-bottom: 1px solid #778;
-    border-right: 1px solid #778;
-}
-
-.sidebarmenu ul li a:link, .sidebarmenu ul li a:visited, .sidebarmenu ul li a:active{
-    background-color: #cc7600; /*background of tabs (default state)*/
-}
-
-.sidebarmenu ul li a:visited{
-    color: white;
-}
-
-.sidebarmenu ul li a:hover{
-    background-color: black;
+#hide {
+    position:absolute;
+    top:30px;
+    left:-190px;
 }
 
 /*Sub level menu items */
-.sidebarmenu ul li ul{
+/*.sidebarmenu ul li ul{
     position: absolute;
-    width: 170px; /*Sub Menu Items width */
+    width: 170px; *//*Sub Menu Items width *//*
     top: 0;
     visibility: hidden;
+}*/
+
+.sidebarmenu a.sliding-element{
+    background: url(images/right.gif) no-repeat 97% 50%;
 }
 
-.sidebarmenu a.subfolderstyle{
-    background: url(images/right.gif) no-repeat 97% 50%;
+#navigation-block {
+    position:relative;
+    margin-left: -220px;
+    margin-top: 45px;
+}
+
+ul#sliding-navigation
+{
+    list-style: none;
+    font-size: .75em;
+    margin: 30px 0;
+    padding: 0;
+}
+
+ul#sliding-navigation li.sliding-element h3,
+ul#sliding-navigation li.sliding-element a{
+    display: block;
+    width: 150px;
+    padding: 5px 18px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+ul#sliding-navigation li.sliding-element h3{
+    color: #000000;
+    background:#333 url(images/main_tab_bg.jpg) repeat-y;
+    border: 2px solid #82410f;
+    font-weight: normal;
+}
+
+ul#sliding-navigation li.sliding-element a{
+
+    color:black;
+    background: #82410f url(images/tab_bg.jpg) no-repeat right;
+    border: 2px solid #82410f;
+    text-decoration: none;
+}
+
+ul#sliding-navigation li.sliding-element a:hover{ color: #ffff66; }
+
+ul#sliding-navigation li.sliding-element ul li{
+    list-style-type: none;
+}
+
+ul#sliding-navigation li.sliding-element ul{
+    display: none;               /* hides child menu blocks - one of the most important declarations */
+    position: inherit;          /* make child blocks hover without leaving space for them */
+    /*top: -3px;                     *//*position slightly lower than the parent menu item*/
+    /*left: 140px;*/
+}
+
+ul#sliding-navigation li:hover ul{
+    display: block;
 }
 
 

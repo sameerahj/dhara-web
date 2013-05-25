@@ -16,6 +16,7 @@
     <script type="text/javascript" src="js/caviar-dreams.cufonfonts.js"></script>
     <script type="text/javascript" src="js/calibri.cufonfonts.js"></script>
     <script type="text/javascript" src="js/fyp_web.js"></script>
+    <script type="text/javascript" src="sliding_effect.js"></script>
     <!-- Cufon text replacement -->
     <script type="text/javascript">
         $(document).ready(function(){
@@ -81,7 +82,7 @@
         <li><a class="contact" href="#contact"><img src="images/icon-contact.png" alt="Contact"></a></li>
     </ul>
 </div>
-<div id="featuredArticles">
+<!--<div id="featuredArticles">
     <div class="content">
         <h3>Contents</h3>
         <div class="sidebarmenu">
@@ -97,8 +98,21 @@
             </ul>
         </div>
     </div>
-</div>
+</div>-->
 <div id="siteContent">
+<div class="sidebarmenu">
+    <ul id="sliding-navigation">
+        <li class="sliding-element"><h3>Content</h3></li>
+        <li class="sliding-element"><a href="#" onclick="loadContent('geoscience.html');">Geoscience</a></li>
+        <li class="sliding-element"><span><a href="#" onclick="loadContent('workflows.html');">Scientific Workflows</a></span></li>
+        <li class="sliding-element"><a href="#">Science Gateways</a></li>
+        <li class="sliding-element"><a href="#">OGC</a><ul><li class="sliding-element"><a href="#">What is OGC?</a></li><li class="sliding-element"><a href="#">WPS</a></li><li class="sliding-element"><a href="#">WCS</a></li><li class="sliding-element"><a href="#">WFS</a></li><li class="sliding-element"><a href="#">WMS</a></li></ul></li>
+        <li class="sliding-element"><a href="#">Architecture</a></li>
+        <li class="sliding-element"><a href="#">Literature Review</a><ul><li class="sliding-element"><a href="docs/lit-review.pdf">Litreview.pdf</a></li><li class="sliding-element"><a href="http://prezi.com/6rykarhrxlqy/dhara-litreview-presentation/" target="_blank">Presentation</a></li></ul></li>
+    </ul>
+    </div>
+</div>
+<div id="featuredArticles">
     <div class="content">
         <h3>Featured</h3>
         <h4><a href="http://www.nitc.lk/">NITC Conference</a></h4>
@@ -115,14 +129,14 @@
 
         </div>
         <div class="right">
-            <h3>Welcome to Dhara , a geo science gateway. </h3>
+            <h3>Welcome to Dhara , A Geoscience Gateway. </h3>
             <br>
-            <p >Dhara provides access to geo science services by extracting geo data
-                from various geo data sources and analyzing them. It also provides an environment where it is possible for the scientists to create,
-                execute, manage and test geo science workflows.</p>
+            <p >Dhara provides access to geoscience services by extracting geo-data
+                from various geo-data sources and analyzing them. It also provides an environment where it is possible for the scientists to create,
+                execute, manage and test geoscience workflows.</p>
             <br>
-            <p>Scientists can use geo science services catered through Dhara to access and analyze geo spatial data. Dhara creates an
-                environment to run geo science experiments such as spatial prediction of landslide hazards, with its workflow management
+            <p>Scientists can use geoscience services catered through Dhara to access and analyze geospatial data. Dhara creates an
+                environment to run geoscience experiments such as spatial prediction of landslide hazards, with its workflow management
                 capabilities.</p>
         </div>
     </div>
